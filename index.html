@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>꿈길 진로설계</title>
+  <link rel="stylesheet" href="src/styles.css" />
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <h1>꿈길 <span>진로설계</span></h1>
+      <p class="lead">우리 학교의 학과·교육과정을 한눈에 보고, 꿈꾸는 진로에 맞는 과목·복수전공·자격증을 추천받으세요.</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="panel controls" aria-label="설정">
+      <label>대학교
+        <select id="university"></select>
+      </label>
+      <label>꿈꾸는 진로
+        <select id="career"></select>
+      </label>
+      <label>내 학과
+        <select id="department"></select>
+      </label>
+      <label>현재 학년
+        <select id="year">
+          <option value="1">1학년</option>
+          <option value="2">2학년</option>
+          <option value="3">3학년</option>
+          <option value="4">4학년</option>
+        </select>
+      </label>
+    </section>
+
+    <nav class="tabs" role="tablist">
+      <button role="tab" data-tab="recommend" aria-selected="true">진로 맞춤 추천</button>
+      <button role="tab" data-tab="browse" aria-selected="false">교육과정 둘러보기</button>
+    </nav>
+
+    <section id="tab-recommend" class="tab-body"></section>
+    <section id="tab-browse" class="tab-body" hidden></section>
+
+    <p class="notice">※ 대학교와 교육과정은 시연용 가상 데이터입니다. 자격증은 실제 국내 자격증 기준이며, 응시 요건과 일정은 시행기관 공지를 꼭 확인하세요.</p>
+  </main>
+
+  <script src="src/data.js"></script>
+  <script src="src/recommend.js"></script>
+  <script src="src/app.js"></script>
+</body>
+</html>
